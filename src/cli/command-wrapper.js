@@ -18,12 +18,12 @@ import {
 /**
  * Wraps a function that uses async/await in a try/catch block
  * This is a helper utility to abstract away async/await for students
- * 
+ *
  * @param {Function} fn - Function to execute
  * @returns {Function} Wrapped function
  */
 function wrapAsyncFunction(fn) {
-  return function(...args) {
+  return function (...args) {
     try {
       const result = fn(...args);
       if (result instanceof Promise) {
@@ -41,7 +41,7 @@ function wrapAsyncFunction(fn) {
 
 /**
  * Gets all recipes from storage
- * 
+ *
  * @param {Function} callback - Function to call with recipes
  */
 export function getRecipes(callback) {
@@ -57,7 +57,7 @@ export function getRecipes(callback) {
 
 /**
  * Gets a recipe by ID
- * 
+ *
  * @param {number} id - Recipe ID
  * @param {Function} callback - Function to call with recipe
  */
@@ -80,7 +80,7 @@ export function getRecipeById(id, callback) {
 
 /**
  * Creates a new recipe and adds it to storage
- * 
+ *
  * @param {Object} recipe - Recipe object to add
  * @param {Function} callback - Function to call after adding
  */
@@ -103,7 +103,7 @@ export function createNewRecipe(recipe, callback) {
 
 /**
  * Updates an existing recipe
- * 
+ *
  * @param {Object} recipe - Recipe object to update
  * @param {string} successMessage - Success message to display
  * @param {Function} callback - Function to call after updating
@@ -127,7 +127,7 @@ export function updateExistingRecipe(recipe, successMessage, callback) {
 
 /**
  * Deletes a recipe by ID
- * 
+ *
  * @param {number} id - Recipe ID
  * @param {string} recipeName - Recipe name for success message
  * @param {Function} callback - Function to call after deleting
@@ -151,7 +151,7 @@ export function deleteRecipe(id, recipeName, callback) {
 
 /**
  * Gets recipes that can be made quickly
- * 
+ *
  * @param {number} maxTime - Maximum cooking time
  * @param {Function} callback - Function to call with quick recipes
  */
