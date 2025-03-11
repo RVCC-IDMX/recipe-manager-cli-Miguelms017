@@ -84,7 +84,7 @@ export async function promptForIngredient() {
   const ingredient = await input({
     message: 'Insert ingredient name: ',
     validate: function (value) {
-      if (value.trim === '') {
+      if (value.trim() === '') {
         return 'please insert an ingredient.';
       } else {
         return true;
@@ -92,11 +92,11 @@ export async function promptForIngredient() {
     }
   })
 
-  const qty = await input({
+  const qty = await number({
     message: `Insert the quantity for ${ingredient}`,
     validate: function (value) {
       if (value <= 0 || isNaN(value)) {
-        return 'insert a valid  quantity'
+        return 'insert a valid quantity'
       } else {
         return true;
       }
@@ -106,7 +106,7 @@ export async function promptForIngredient() {
   const unit = await input({
     message: 'Insert units: ',
     validate: function (value) {
-      if (value.trim === '') {
+      if (value.trim() === '') {
         return 'please insert the units.';
       } else {
         return true;

@@ -132,11 +132,11 @@ yargs(hideBin(process.argv))
         // Hint: addIngredient accepts recipe, name, amount, and unit parameters
 
         // Your code here
-        addIngredient(recipe, ingredientInfo.name, ingredientInfo.amount, ingredientInfo.unit);
+        addIngredient(recipe, ingredientInfo.ingredient, ingredientInfo.quantity, ingredientInfo.unit);
 
         // 4. Update the recipe in storage
         // Notice we create a success message first
-        const successMessage = `Added ${ingredientInfo.amount} ${ingredientInfo.unit} of ${ingredientInfo.name} to "${recipe.name}"`;
+        const successMessage = `Added ${ingredientInfo.quantity} ${ingredientInfo.unit} of ${ingredientInfo.ingredient} to "${recipe.name}"`;
         updateExistingRecipe(recipe, successMessage);
       });
     });
